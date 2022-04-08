@@ -18,7 +18,7 @@ function sorting(array) {
   );
   if (alert.trim() === "name") {
     let alert1 = prompt(`In which order?`, '"asc" or "desc"');
-    if (alert1.trim("asc")) {
+    if (alert1.trim() === "asc") {
       copyArr.sort((a, b) => {
         if (a.name[0].toUpperCase() > b.name[0].toUpperCase()) {
           return 1;
@@ -29,7 +29,7 @@ function sorting(array) {
         return 0;
       });
       return copyArr;
-    } else if (alert1.trim("desc")) {
+    } else if (alert1.trim() === "desc") {
       copyArr.sort((a, b) => {
         if (a.name[0].toUpperCase() > b.name[0].toUpperCase()) {
           return -1;
