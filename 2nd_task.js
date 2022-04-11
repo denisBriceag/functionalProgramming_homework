@@ -38,11 +38,11 @@ Array.prototype.findWithReduce = function (callback) {
 
 Array.prototype.indexOfWithReduce = function (callback) {
   return this.reduce((acc, curr, index) => {
-    if (callback(curr) && acc === undefined) {
+    if (callback(curr) && acc === -1) {
       return index;
     }
     return acc;
-  }, undefined);
+  }, -1);
 };
 
 Array.prototype.filter();
